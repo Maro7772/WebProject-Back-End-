@@ -10,6 +10,8 @@ const restaurantRoutes = require('./routes/restaurant.routes');
 const cartRoutes = require('./routes/cart.routes');
 const orderRoutes = require('./routes/order.routes');
 const reviewRoutes = require('./routes/review.routes');
+const customerRoutes = require('./routes/customer.routes');
+const menuRoutes = require('./routes/menu.routes');
 
 const app = express();
 
@@ -24,6 +26,8 @@ app.use('/api/v1/restaurants', restaurantRoutes);
 app.use('/api/v1/cart', cartRoutes);
 app.use('/api/v1/orders', orderRoutes);
 app.use('/api/v1', reviewRoutes);
+app.use('/api/v1/customers', customerRoutes);
+app.use('/api/v1', menuRoutes);
 
 // health check
 app.get('/api/v1/health', (req, res) => {
